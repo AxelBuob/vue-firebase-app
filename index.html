@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,14 +7,31 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
 </head>
+
 <body>
     <h1>Hello Vue!</h1>
+    <h2>Events</h2>
+    <h3>V-ON:CLICK</h3>
     <div id="app">
-        <h2>{{ title }} - {{ author }} - {{ age }}</h2>
-        <button v-on:click="age++">Increase age</button>
-        <button @click="age--">Decrease age</button>
-        <button @click="changeTitle('New Title')">Change book title</button>
+        <div v-if="showBooks">
+            <!-- dynamic data -->
+            <h2>{{ title }} - {{ author }} - {{ age }}</h2>
+            <button v-on:click="age++">Increase age</button>
+            <button @click="age--">Decrease age</button>
+            <button @click="changeTitle('New Title')">Change book title</button>
+        </div>
+
+        <h2>Conditionnal rendering</h2>
+        <h3>V-IF</h3>
+        <button @click="toggleShowBooks()">
+            <span v-if="showBooks">Hide books</span>
+            <span v-else>Show books</span>
+        </button>
+
+        <h3>V-SHOW</h3>
+        <p v-show="showBooks">Currently showing books</p>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
