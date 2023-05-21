@@ -79,6 +79,14 @@
         <h2>Attribute Binding</h2>
         <p><a v-bind:href="url">The Best Site Ever</a></p>
         <p><a :href="url">The Second Best Site Ever</a></p>
+
+        <h2>Computed Properties</h2>
+        <ul>
+            <li v-for="book in filteredBooks">
+                <img :src=" book.img" :alt="book.tittle">
+                <h3>{{ book.title }} - {{ book.author }} - {{ book.age }}</h3>
+            </li>
+        </ul>
     </div>
     <script src="app.js"></script>
 </body>
