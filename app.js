@@ -8,19 +8,22 @@ const app = Vue.createApp({
                     title: 'The Final Empire',
                     author: 'Brandon Sanderson',
                     age: 45,
-                    img: "https://picsum.photos/200/"
+                    img: "https://picsum.photos/200/",
+                    isfav: true
                 },
                 {
                     title: 'Name of the Wind',
                     author: 'Patrick Rothfuss',
                     age: 56,
-                    img: "https://picsum.photos/200/"
+                    img: "https://picsum.photos/200/",
+                    isfav: false
                 },
                 {
                     title: 'The Way of the Kings',
                     author: 'Brandon Sanderson',
                     age: 45,
-                    img: "https://picsum.photos/200/"
+                    img: "https://picsum.photos/200/",
+                    isfav: false
                 },
 
             ],

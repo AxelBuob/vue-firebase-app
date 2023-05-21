@@ -7,6 +7,12 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
     <style>
+        body {
+            background-color: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
         .box {
             padding: 100px 0;
             width: 400px;
@@ -14,6 +20,21 @@
             background: #ddd;
             margin: 20px;
             display: inline-block;
+        }
+
+        li {
+            list-style-type: none;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li.fav {
+            background-color: rgba(255, 0, 0, 0.193);
         }
     </style>
 </head>
@@ -49,7 +70,7 @@
 
         <h2>Outputting Lists V-FOR</h2>
         <ul>
-            <li v-for="book in books">
+            <li v-for="book in books" :class=" { fav: book.isfav }">
                 <img :src="book.img" :alt="book.tittle">
                 <h3>{{ book.title }} - {{ book.author }} - {{ book.age }}</h3>
             </li>
