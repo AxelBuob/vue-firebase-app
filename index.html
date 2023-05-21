@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,6 +40,13 @@
 
         <h3>V-SHOW</h3>
         <p v-show="showBooks">Currently showing books</p>
+
+        <h2>Mouse Events</h2>
+        <div class="box" @mouseover="handleEvent($event, 5)">mouseover</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">position: {{ x }} - {{ y }}</div>
+
     </div>
     <script src="app.js"></script>
 </body>
