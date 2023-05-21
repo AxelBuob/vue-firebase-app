@@ -70,7 +70,7 @@
 
         <h2>Outputting Lists V-FOR</h2>
         <ul>
-            <li v-for="book in books" :class=" { fav: book.isfav }">
+            <li v-for="book in books" :class=" { fav: book.isfav }" @click="toggleFav(book)">
                 <img :src="book.img" :alt="book.tittle">
                 <h3>{{ book.title }} - {{ book.author }} - {{ book.age }}</h3>
             </li>

@@ -52,6 +52,9 @@ const app = Vue.createApp({
         handleMouseMove(e) {
             this.x = e.offsetX;
             this.y = e.offsetY;
+        },
+        toggleFav(book) {
+            book.isfav = !book.isfav;
         }
 
     }
