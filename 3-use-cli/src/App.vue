@@ -9,7 +9,7 @@
     <Modal :header="header" :text="text" :theme="theme" @close="toggleModal"/>
   </div>
   <p>
-    <button @click="toggleModal">Open Modal</button>
+    <button @click.shift="toggleModal">Open Modal (shift)</button>
   </p>
 </template>
 
