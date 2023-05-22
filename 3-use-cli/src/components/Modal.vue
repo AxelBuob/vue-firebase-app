@@ -1,15 +1,17 @@
 <template>
     <div class="backdrop">
-        <div class="modal">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a dolores placeat reprehenderit nihil culpa illum, porro odit quis, omnis unde non, deserunt libero repudiandae veritatis maxime! Quia, labore similique?</p>
+        <div class="modal" :class="{ sale: theme === 'sale' }">
+            <h1>{{ header }}</h1>
+            <p>{{  text }}</p>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: [
+            'header', 'text', 'theme'
+        ]
     }
 </script>
 
@@ -35,5 +37,13 @@
 }
 .modal p {
     font-style: normal;
+}
+
+.modal.sale {
+    background-color: rgb(255, 105, 105);
+    color: #fff;
+}
+.modal.sale > h1 {
+    color: #fff;
 }
 </style>
